@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form input {
+        padding: 0.5vw 0.5vw;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #000;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    button {
+        background-color: #138f83;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+
+    input{
+        margin: 30px;
+    }
+    
+
+    .input button{
+        width: 80px;
+    }
+</style>
+
+<body>
+    <table id="Table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="row1">
+                <td>John Doe</td>
+                <td>101</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr id="row2">
+                <td>Jane Smith</td>
+                <td>102</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr id="row3">
+                <td>Mark</td>
+                <td>10</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr id="row4">
+                <td>James</td>
+                <td>8</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="input">
+        <input type="text" id="nameInput" placeholder="Enter Name">
+        <input type="text" id="rollNumberInput" placeholder="Enter Roll Number">
+        <button type="button" onclick="addRow()">Add</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
